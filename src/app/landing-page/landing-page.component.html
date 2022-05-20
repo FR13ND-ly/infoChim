@@ -1,0 +1,12 @@
+<div class="hero">
+    <p class="hero__title">Compuși Carboxilici</p>
+    <img class="hero__image" src="/assets/images/landing-page-bg.gif">
+</div>
+<div class="articles">
+    <span class="article" 
+        *ngFor="let article of articles; let i = index" 
+        [routerLink]="article.url"
+        [style.animation-delay.s]=".1 * i">
+        <p class="article__text">{{ article.name }}</p>
+    </span>
+</div>

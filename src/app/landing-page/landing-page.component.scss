@@ -1,0 +1,107 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    height: 90%;
+    &__title {
+        position: absolute;
+        line-height: normal;
+        font-weight: bold;
+        color: #fff;
+        z-index: 1;
+        opacity: 0;
+        animation: tie-slide-in-up .5s cubic-bezier(0, 0, .2, 1) forwards;
+    }
+    &__image {
+        object-fit: cover;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        filter: brightness(.2);
+    }
+}
+
+.articles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.article {
+    cursor: pointer;
+    opacity: 0;
+    animation: tie-slide-in-up .2s cubic-bezier(.175, .885, .32, 1.275) forwards;
+    &__text {
+        z-index: 2;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        padding: 0 .6rem;
+        user-select: none;
+        font-weight: 500;
+        &::after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -.6rem;
+            width: 100%;
+            height: 5px;
+            border-radius: 3px;
+            background-color: var(--red-color);
+        }
+    }
+    &:nth-of-type(2) &__text::after {
+        background-color: var(--blue-color);
+    }
+    &:nth-of-type(3) &__text::after {
+        background-color: var(--green-color);
+    }
+    &:nth-of-type(4) &__text::after {
+        background-color: var(--purple-color);
+    }
+    &:nth-of-type(5) &__text::after {
+        background-color: var(--yellow-color);
+    }
+    &:nth-of-type(6) &__text::after {
+        background-color: var(--cyan-color);
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .hero__title {
+        font-size: 6rem;
+    }
+
+    .articles {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .article {
+        &__text {
+            font-size: 1.2rem;
+            &::after {
+                transition: .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+        }
+        &:hover &__text::after {
+            height: 2.6rem;
+        }
+    }
+}

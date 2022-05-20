@@ -1,0 +1,15 @@
+<div class="logo" routerLink="/">
+    <img class="logo__image" src="/assets/images/logo.png">
+    <span class="logo__text">InfoChim</span>
+</div>
+<div class="articles">
+    <div class="user">
+        <img class="user__image" src="https://play-lh.googleusercontent.com/aFWiT2lTa9CYBpyPjfgfNHd0r5puwKRGj2rHpdPTNrz2N9LXgN_MbLjePd1OTc0E8Rl1">
+    </div>
+    <button mat-icon-button (click)="onChangeTheme()"><mat-icon>brightness_4</mat-icon></button>
+    <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+</div>
+
+<mat-menu #menu="matMenu">
+    <button mat-menu-item *ngFor="let article of articles" [routerLink]="article.url">{{ article.name }}</button>
+</mat-menu>

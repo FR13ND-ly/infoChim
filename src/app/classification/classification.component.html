@@ -1,0 +1,51 @@
+<section>
+    <h1 class="title-1">Clasificare</h1>
+    <h3 class="title-3"><b>A.</b> După natura radicalului</h3>
+    <ul class="list-1">
+        <li>
+            <b class="list-header green">Saturați R</b>
+            <ul>
+                <li class="list-item-1">Alcan</li>
+            </ul>
+        </li>
+        <li>
+            <b class="list-header purple">Nesaturați R</b>
+            <ul>
+                <li class="list-item-1">Alchenă</li>
+                <li class="list-item-1">Alchină</li>
+            </ul>
+        </li>
+        <li>
+            <b class="list-header yellow">Aromatic R=Ar</b>
+            <ul>
+                <li class="list-item-1">Arenă</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+<section>
+    <h3 class="title-3"><b>B.</b> După numărul grupărilor carboxil</h3>
+    <ul class="list-1">
+        <li class="list-item-1 blue">Monocarboxilici</li>
+        <li class="list-item-1 red">Policarboxilici</li>
+    </ul>
+</section>
+<section>
+    <h3 class="title-3"><b>ACIZI GRAȘI:</b> acizi monocarboxilici cu număr par de atomi de carbon în moleculă şi catenă liniară.</h3>
+</section>
+<section>
+    <h2 class="title-2">Exemple</h2>
+    <div class="elements">
+        <div class="element" (click)="el.classList.toggle('element--show')" #el *ngFor="let element of elements">
+            <div class="formula" [class.formula--vertical]="element.vertical" [innerHTML]="element.formula"></div>
+            <div class="type">
+                <span class="type__text"
+                    [ngClass]="{'green' : element.type1 == 'Saturat', 'purple' : element.type1 == 'Nesaturat', 'yellow' : element.type1 == 'Aromatic'}">
+                    {{ element.type1 }}</span>
+            </div>
+            <div class="type">
+                <span class="type__text blue">{{ element.type2 }}</span>
+            </div>
+        </div>
+    </div>
+</section>

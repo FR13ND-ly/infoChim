@@ -1,0 +1,43 @@
+.formule {
+    display: flex;
+    gap: 2.6rem;
+    margin-bottom: 6rem;
+}
+
+.formula {
+    align-items: flex-start;
+}
+
+.before-tree {
+    padding-right: 2.6rem;
+}
+
+.tree-2 {
+    position: absolute;
+    margin-left: 3.3rem;
+    &__divider {
+        height: 25px;
+        width: 4px;
+        transform: translateX(1rem);
+        background-color: var(--text-color);
+    }
+    &__branch {
+        position: fixed;
+    }
+}
+
+.exponent {
+    position: relative;
+    &::after {
+        content: "δ-";
+        position: absolute;
+        z-index: 1;
+        top: -.5rem;
+        right: -.5rem;
+        font-size: 1rem;
+        color: var(--blue-color);
+    }
+    &:nth-of-type(2n)::after {
+        content: "δ+";
+    }
+}

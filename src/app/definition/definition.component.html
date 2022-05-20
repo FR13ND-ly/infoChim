@@ -1,0 +1,22 @@
+<section>
+    <h1 class="title-1">Definiție</h1>
+    <p class="text">Compuşii (Acizii) carboxilici sunt derivaţi ai <b>hidrocarburilor</b> care conţin în moleculă una sau mai multe <b>grupări carboxil</b></p>
+</section>
+<section>
+    <h2 class="title-2">Formula generală</h2>
+    <div class="formule">
+        <div class="formula">
+            R-<span class="tree-1" el="O">C</span>-OH
+        </div>
+        <div class="selector">
+            <div class="buttons">
+                <button mat-stroked-button [class.primary]="R == 'H'" (click)="R = 'H'">H</button>
+                <button mat-stroked-button [class.primary]="R == 'CH<sub>3</sub>'" (click)="R = 'CH<sub>3</sub>'">CH<sub>3</sub></button>
+                <button mat-stroked-button [class.primary]="R == 'C<sub>3</sub>H<sub>6</sub>'" (click)="R = 'C<sub>3</sub>H<sub>6</sub>'">C<sub>3</sub>H<sub>6</sub></button>
+            </div>
+            <div class="formula blue">
+                <span [innerHTML]="R"></span>-<span class="tree-1 red-el" el="O">C</span>-OH
+            </div>
+        </div>
+    </div>
+</section>

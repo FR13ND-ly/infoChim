@@ -1,0 +1,28 @@
+<section>
+    <h1 class="title-1">Nomenclatură</h1>
+    <h2 class="title-3"><b>I. </b>Denumire Științifică</h2>
+    <ul>
+        <li>
+            <p class="list-header">Cu sufixul OIC</p>
+            <p class="text"><span class="red">Acid</span> + <span class="blue">numele hidrocarburii</span> + poziția grupărilor carboxil + <span class="green">numărul grupărilor carboxil(di, tri, etc)</span> + <span class="red">OIC</span></p>
+        </li>
+        <li>
+            <p class="list-header">Cu prefixul CARBOXI(în cazul compușilor cu mai multe grupări funcționale)</p>
+            <p class="text">Poziția grupărilor carboxil + <span class="green">numărul grupărilor carboxil(<span class="blue">di, tri, etc</span>)</span> + <span class="red">CARBOXI</span> + <span class="blue">numele hidrocarburii</span></p>
+        </li>
+    </ul>
+</section>
+<section>
+    <h2 class="title-2">Exemple</h2>
+    <div class="elements">
+        <div class="element" (click)="el.classList.toggle('element--show')" #el *ngFor="let element of elements">
+            <div class="formula" [class.formula--vertical]="element.vertical" [innerHTML]="element.formula"></div>
+            <div class="type">
+                <span class="type__text red" [innerHTML]="element.type1"></span>
+            </div>
+            <div class="type" *ngIf="element.type2">
+                <span class="type__text purple">{{ element.type2 }}</span>
+            </div>
+        </div>
+    </div>
+</section>

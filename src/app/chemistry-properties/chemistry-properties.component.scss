@@ -1,0 +1,167 @@
+.list-item {
+    font-size: 1rem;
+    line-height: normal;
+}
+
+.connector {
+    width: 40px;
+    height: 3px;
+    background-color: var(--red-color);
+    position: relative;
+    display: flex;
+    align-items: center;
+    &::before, &::after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        background-color: var(--text-color);
+        border-radius: 50%;
+        position: absolute;
+    }
+    &::after {
+        right: 0;
+    }
+}
+
+.dots {
+    position: relative;
+    margin-right: 1rem;
+    transform: translateY(-3px);
+}
+
+.negative, .positive {
+    position: relative;
+    &::after { 
+        content: '+';
+        position: absolute;
+        color: var(--blue-color);
+        font-size: 1.4rem;
+        right: -.4rem;
+        top: -.5rem;
+    }
+}
+
+.negative::after {
+    content: '-';
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--text-color);
+    border-radius: 50%;
+    position: absolute;
+    &:nth-child(1) {
+        left: .6rem;
+        top: 0;
+    }
+    &:nth-child(2) {
+        right: .6rem;
+        top: 0;
+    }
+    &:nth-child(3) {
+        right: -20%;
+        top: 1.2rem;
+    }
+    &:nth-child(4) {
+        right: -20%;
+        bottom: 1.2rem;
+    }
+    &:nth-child(5) {
+        left: .6rem;
+        bottom: 0%;
+    }
+    &:nth-child(6) {
+        right: .6rem;
+        bottom: 0%;
+    }
+}
+
+.with-arrow {
+    position: relative;
+}
+
+.arrow {
+    stroke: var(--text-color);
+    position: absolute;
+    top: -1.8rem;
+    left: -.2rem;
+}
+
+.up-arrow {
+    position: absolute;
+    font-size: 1.2rem;
+    top: -3rem;
+    left: 4.5rem;
+    sup {
+        font-size: .8rem;
+    }
+}
+
+.potions {
+    display: flex;
+    justify-content: left;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.potion {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    &__image {
+        mask-size: cover;
+        -webkit-mask-image: url('/assets/images/potion.svg');
+        mask-image: url('/assets/images/potion.svg');
+        background-color: var(--purple-color);
+        width: 200px; 
+        height: 250px; 
+        transition: .5s cubic-bezier(0, 0, .2, 1);
+        cursor: pointer;
+        &:hover {
+            background-color: var(--blue-color);
+        }
+    }
+    &__name {
+        position: absolute;
+        bottom: 10%;
+        font-size: 1.6rem;
+        font-weight: bold;
+        z-index: 1;
+        color: #fff;
+    }
+    &:hover &__image {
+        background-color: var(--red-color);
+    }
+    &:nth-of-type(2) { 
+        .potion__image {
+            background-color: #f57c00;
+            
+        }
+        &:hover .potion__image {
+            background-color: var(--red-color);
+        }
+    }
+}
+
+.divider-1, .divider-2 {
+    height: 25px;
+}
+
+.divider-2 {
+    width: 8px;
+    border-left: 4px solid var(--text-color);
+    border-right: 4px solid var(--text-color);
+}
+
+.s-reaction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divider-1 {
+    width: 4px;
+    background-color: var(--text-color);
+}
