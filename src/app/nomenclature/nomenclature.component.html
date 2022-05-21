@@ -1,5 +1,5 @@
 <section>
-    <h1 class="title-1">Nomenclatură</h1>
+    <h1 class="title-1" id="nomenclature">Nomenclatură</h1>
     <h2 class="title-3"><b>I. </b>Denumire Științifică</h2>
     <ul>
         <li>
@@ -12,8 +12,8 @@
         </li>
     </ul>
 </section>
-<section>
-    <h2 class="title-2">Exemple</h2>
+<section id="exemples">
+    <h3 class="title-3" ><b>II. </b>Denumiri Tehnice</h3>
     <div class="elements">
         <div class="element" (click)="el.classList.toggle('element--show')" #el *ngFor="let element of elements">
             <div class="formula" [class.formula--vertical]="element.vertical" [innerHTML]="element.formula"></div>
@@ -26,3 +26,4 @@
         </div>
     </div>
 </section>
+<!-- <app-titles [titles]="titles"></app-titles> -->

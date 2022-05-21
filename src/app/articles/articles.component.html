@@ -1,6 +1,7 @@
 <app-header></app-header>
 <main>
-    <router-outlet></router-outlet>
+    <router-outlet (activate)="onChange()"></router-outlet>
+    <app-comments></app-comments>
 </main>
 <footer>
     <app-footer></app-footer>

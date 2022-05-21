@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Article } from '../shared/data-access/article.model';
 import { articles } from '../shared/data-access/articles';
+import { HeaderSelectService } from '../shared/data-access/header-select.service';
+import { UserService } from '../shared/data-access/user.service';
 
 @Component({
   selector: 'app-header',
@@ -9,11 +11,15 @@ import { articles } from '../shared/data-access/articles';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService : UserService, private headerSelectService : HeaderSelectService) { }
 
+  user$ = this.userService.getUserUpdateListener()
+  index$ = this.headerSelectService.getIndexUpdateListener()
+  
   articles : Array<Article> = [...articles]
 
   ngOnInit(): void {
+    this.userService.init()
   }
 
   onChangeTheme() {
@@ -21,4 +27,11 @@ export class HeaderComponent implements OnInit {
     localStorage.setItem('theme', localStorage.getItem('theme') == 'dark' ? '' : 'dark')
   }
 
+  onLogin() {
+    this.userService.login()
+  }
+
+  onLogout() {
+    this.userService.logout()
+  }
 }

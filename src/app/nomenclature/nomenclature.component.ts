@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-nomenclature',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NomenclatureComponent implements OnInit {
 
-  constructor() { }
+  constructor(private titleService: Title) { }
 
   elements : Array<any> = [
     {
@@ -77,7 +78,19 @@ export class NomenclatureComponent implements OnInit {
     },
   ]
 
-  ngOnInit(): void {
-  }
+  titles : any = []
 
+  ngOnInit(): void {
+    this.titleService.setTitle("Nomenclatură");
+    this.titles = [
+      {
+        display : 'Nomenclatură',
+        el : document.querySelector('#nomenclature')
+      },
+      {
+        display : 'Denumiri tehnice',
+        el : document.querySelector('#exemples')
+      }
+    ]
+  }
 }

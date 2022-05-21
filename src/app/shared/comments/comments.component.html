@@ -1,0 +1,21 @@
+<section>
+    <h3 class="title-3">Comentarii</h3>
+    <form class="add-comment" #commentForm="ngForm" (submit)="onAddComment(commentForm, user)" *ngIf="user$ | async as user; else warn">
+        <img class="add-comment__user-photo" [src]="user?.photoURL"/>
+        <mat-form-field appearance="standard" class="add-comment__input">
+            <input matInput ngModel name="text" #commentText placeholder="Adaugă un comentariu"/>
+        </mat-form-field>
+        <button class="add-comment__button" mat-raised-button type="submit" color="primary" *ngIf="commentText.value.trim()">Publică</button>
+    </form>
+    <ng-template #warn><div class="warn">Trebuie să te loghezi pentru a scrie comentarii</div></ng-template>
+    <div class="comments" *ngIf="(comments$ | async)!.reverse() as comments">
+        <div class="comment" *ngFor="let comment of comments">
+            <img class="comment__userPhoto" [src]="comment.userPhoto">
+            <div class="comment__content">
+                <h2 class="comment__user">{{ comment.username }}</h2>
+                <p class="comment_text">{{ comment.content }}</p>
+            </div>
+
+        </div>
+    </div>
+</section>

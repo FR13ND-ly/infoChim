@@ -27,7 +27,7 @@ $dark-theme: mat.define-dark-theme((
   --teal-color: #00796b;
   --text-color: #212121;
   --red-color: #f44336;
-  --blue-color: #64b5f6;
+  --blue-color: #1e88e5;
   --green-color: #4caf50;
   --purple-color: #ba68c8;
   --yellow-color: #fbc02d;
@@ -46,7 +46,7 @@ $dark-theme: mat.define-dark-theme((
 }
 
 .primary {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color)!important;
 }
 
 .red {

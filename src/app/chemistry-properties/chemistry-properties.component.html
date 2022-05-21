@@ -1,5 +1,5 @@
 <section>
-    <h1 class="title-1">Proprietăți Chimice</h1>
+    <h1 class="title-1" id="t">Proprietăți Chimice</h1>
     <p class="text"><span class="red">Tăria acizilor</span> carboxilici = <span class="red">uşurinţa de a ceda protoni</span> în soluţie apoasă.</p>
     <b class="list-header">Tăria acizilor carboxilici variază astfel:</b>
     <ol>
@@ -9,7 +9,7 @@
     </ol>
 </section>
 <section>
-    <h3 class="title-3"><b>A. </b>Proprietăți comune ale acizilor anorganici</h3>
+    <h3 class="title-3" id="shared"><b>A. </b>Proprietăți comune ale acizilor anorganici</h3>
     <ul>
         <li><p class="list-header">Aciditate</p></li>
         <div class="formula">
@@ -74,6 +74,16 @@
                 +CO<sub>2</sub>↑+H<sub>2</sub>O
             </div>
             <p class="text">Bicarbonat de amoniu(amoniac alimentar)</p>
+            <div class="formula">
+                2R-COOH-CaC<sub>3</sub>O→(R-CO<span class="negative">O</span>)<sub>2</sub>C<span class="positive-2">a</span>
+                +CO<sub>2</sub>↑+H<sub>2</sub>O
+            </div>
+            <b>Exemplu:</b>
+            <div class="formula">
+                <span class="green">2CH<sub>3</sub>-COOH</span>+<span class="yellow">CaCO<sub>3</sub></span>→<span class="purple">(CH<sub>3</sub>-CO<span class="negative">O</span>)<sub>2</sub>C<span class="positive-2">a</span></span>
+                +CO<sub>2</sub>↑+H<sub>2</sub>O<button mat-icon-button (click)="onOpenVideo('spsaNMBtaF0')"><mat-icon>play_circle</mat-icon></button>
+            </div>
+            <p class="text"><span class="green">Acid Acetic</span> | <span class="yellow">Carbonat de Calciu</span> | <span class="purple">Acetat de Calciu</span></p>
         </li>
     </ul>
 </section>
@@ -91,12 +101,22 @@
                 H<sub>2</sub>↑
             </div>
             <p class="text green">Sare organică de natriu</p>
+            <b>Exemplu:</b>
+            <div class="formula">
+                <span class="blue">CH<sub>3</sub>-COOH</span>+<span class="red">Na</span>→<span class="green">CH<sub>3</sub>-CO<span class="negative">O</span>N<span class="positive">a</span></span>+
+                <div class="fraction">
+                    <span>1</span>
+                    <span class="fraction__divider"></span>
+                    <span>2</span>
+                </div>
+                H<sub>2</sub>↑<button mat-icon-button (click)="onOpenVideo('aGaWwnMyKVE')"><mat-icon>play_circle</mat-icon></button>
+            </div>
+            <p class="text"><span class="blue">Acid Acetic</span> | <span class="green">Acetat de Sodiu</span></p>
         </li>
         <li>
             <p class="list-header blue">Reacția cu oxizi metalici</p>
             <div class="formula">
-                2<span class="blue">R-COOH</span>+<span class="blue">K<sub>2</sub>O</span>→<span class="green">2R-CO
-                <span class="negative">O</span><span class="positive">K</span></span>+H<sub>2</sub>O
+                2<span class="blue">R-COOH</span>+<span class="blue">K<sub>2</sub>O</span>→<span class="green">2R-CO<span class="negative">O</span><span class="positive">K</span></span>+H<sub>2</sub>O
             </div>
             <p class="text green">Sare organică de potasiu</p>
         </li>
@@ -112,7 +132,7 @@
     </ul>
 </section>
 <section>
-    <h3 class="title-3"><b>B. </b>Proprietăți specifice acizilor organici</h3>
+    <h3 class="title-3" id="spec"><b>B. </b>Proprietăți specifice acizilor organici</h3>
     <ul>
         <li>
             <p class="list-header purple">Reacții de esterificare:</p>
@@ -127,6 +147,11 @@
                 <span class="teal">Alcool </span> |
                 <span class="purple">Este(sare organică)</span>
             </p>
+            <b>Exemplu:</b>
+            <div class="formula">
+                <span class="blue">CH<sub>3</sub>-COOH</span>+<span class="teal">C<sub>2</sub>H<sub>5</sub>-OH</span>→<span class="purple">CH<sub>3</sub>-COOC<sub>2</sub>H<sub>5</sub></span>+H<sub>2</sub>O<button mat-icon-button (click)="onOpenVideo('id7Fve9cMIw')"><mat-icon>play_circle</mat-icon></button>
+            </div>
+            <p class="text"><span class="blue">Acid Acetic</span> | <span class="teal">Alcool Etilic</span> | <span class="purple">Acetat de Etil</span></p>
         </li>
         <li>
             <p class="list-header blue">Reacția de deshidratare: obținerea anhidrelor acide</p>
@@ -156,3 +181,4 @@
         </li>
     </ul>
 </section>
+<app-titles [titles]="titles"></app-titles>

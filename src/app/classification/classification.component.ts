@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-classification',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClassificationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private titleService: Title) { }
 
   elements : Array<any> = [
     {
@@ -66,6 +67,19 @@ export class ClassificationComponent implements OnInit {
     },
   ]
 
+  titles : any = []
+
   ngOnInit(): void {
+    this.titleService.setTitle("Clasificare");
+    this.titles = [
+      {
+        display : 'Clasificare',
+        el : document.querySelector('#classification')
+      },
+      {
+        display : 'Exemple',
+        el : document.querySelector('#exemples')
+      }
+    ]
   }
 }

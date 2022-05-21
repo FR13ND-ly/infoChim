@@ -1,0 +1,31 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: fixed;
+    right: 6rem;
+    top: 6rem;
+}
+
+.title {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    &::before {
+        content: "";
+        position: absolute;
+        left: -.7rem;
+        top: 0;
+        height: 100%;
+        width: 2px;
+        opacity: 0;
+        transition: .3s cubic-bezier(0, 0, .2, 1);
+        background-color: var(--primary-color);
+    }
+}
+
+.view::before {
+    opacity: 1;
+}

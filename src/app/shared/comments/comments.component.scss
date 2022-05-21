@@ -1,0 +1,61 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    width: 50%;
+}
+
+.add-comment {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: .6rem;
+    margin-top: -.8rem;
+    margin-bottom: 3rem;
+    position: relative;
+    &__user-photo {
+        flex-shrink: 0;
+        background-color: #ccc;
+        height: 45px;
+        width: 45px;
+        overflow: hidden;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    &__input {
+        border: 0;
+        width: 100%;
+        margin-top: -2%;
+    }
+    &__button {
+        position: absolute;
+        bottom: -1.5rem;
+        right: 0;
+    }
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.comment {
+    display: flex;
+    gap: 1rem;
+    &__userPhoto {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+    &__user {
+        margin-top: .6rem;
+        line-height: 0;
+    }
+}
+
+.warn {
+    font-weight: bold;
+    margin-top: -1rem;
+    margin-bottom: 2rem!important;
+}

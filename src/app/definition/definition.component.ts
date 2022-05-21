@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-definition',
@@ -7,11 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DefinitionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private titleService: Title) { }
 
-  R : string = ''
+  R  = [
+    {
+      display: "",
+      name: ""
+    },
+    {
+      display: "H",
+      name: "Acid Metanoic"
+    },
+    {
+      display: "CH<sub>3</sub>",
+      name: "Acid Etanoic"
+    },
+    {
+      display: "C<sub>6</sub>H<sub>5</sub>",
+      name: "Acid Benzoic"
+    },
+  ]
+  i : number = 0;
+  titles : any = []
 
   ngOnInit(): void {
+    this.titleService.setTitle("Definiție");
   }
-
 }

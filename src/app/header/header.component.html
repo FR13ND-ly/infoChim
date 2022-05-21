@@ -3,11 +3,24 @@
     <span class="logo__text">InfoChim</span>
 </div>
 <div class="articles">
-    <div class="user">
-        <img class="user__image" src="https://play-lh.googleusercontent.com/aFWiT2lTa9CYBpyPjfgfNHd0r5puwKRGj2rHpdPTNrz2N9LXgN_MbLjePd1OTc0E8Rl1">
+    <div class="articles" *ngIf="{ index : (index$ | async) } as vm">
+        <span class="article" 
+            *ngFor="let article of articles; let i = index" 
+            [routerLink]="article.url"
+            [class.selected]="i == vm.index">
+            {{ article.name }}</span>
     </div>
     <button mat-icon-button (click)="onChangeTheme()"><mat-icon>brightness_4</mat-icon></button>
-    <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+    <!-- <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button> -->
+    <div class="user" *ngIf="user$ | async as user; else userLogin">
+        <mat-icon class="user__logout" (click)="onLogout()">logout</mat-icon>
+        <img class="user__image" [src]="user.photoURL">
+    </div>
+    <ng-template #userLogin>
+        <div class="user">
+            <img class="user__login" (click)="onLogin()" src="https://play-lh.googleusercontent.com/aFWiT2lTa9CYBpyPjfgfNHd0r5puwKRGj2rHpdPTNrz2N9LXgN_MbLjePd1OTc0E8Rl1">
+        </div>
+    </ng-template>
 </div>
 
 <mat-menu #menu="matMenu">
