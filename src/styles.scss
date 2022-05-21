@@ -233,7 +233,7 @@ section {
       margin-bottom: -1.5rem;
     }
   }
-  .tree-1, .tree-2 {
+  .tree-1, .tree-3 {
     position: relative;
     display: flex;
     justify-content: center;
@@ -253,7 +253,7 @@ section {
       bottom: -4.4rem;
     }
   }
-  .tree-2::before {
+  .tree-3::before {
     border: none;
     width: 4px;
     background-color: var(--text-color);
