@@ -29,7 +29,7 @@
     transform: translateY(-3px);
 }
 
-.negative, .positive, .positive-2 {
+.negative, .negative-2, .positive, .positive-2 {
     position: relative;
     &::after { 
         content: '+';
@@ -42,7 +42,11 @@
     }
 }
 
-.negative::after {
+.negative-2::after {
+    right: 0rem;
+}
+
+.negative::after, .negative-2::after {
     content: '-';
 }
 
@@ -134,6 +138,7 @@
     &__name {
         position: absolute;
         bottom: 10%;
+        user-select: none;
         font-size: 1.6rem;
         font-weight: bold;
         z-index: 1;
@@ -152,7 +157,6 @@
         }
     }
 }
-
 
 
 .alcool-1 {
@@ -195,7 +199,7 @@
 }
 
 .bicarbonat {
-    margin-left: 5.5rem!important;
+    margin-left: 5.5rem;
 }
 
 .acetat-4 {

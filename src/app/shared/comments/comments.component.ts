@@ -22,6 +22,7 @@ export class CommentsComponent implements OnInit {
   }
   
   onAddComment(form : NgForm, user : any) {
+    if (!form.form.value.text.trim()) return
     let data = {
       userPhoto : user.photoURL,
       username : user.displayName,
