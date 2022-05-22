@@ -1,7 +1,7 @@
 @use '@angular/material' as mat;
 @include mat.core();
 
-$infoChim-primary: mat.define-palette(mat.$indigo-palette);
+$infoChim-primary: mat.define-palette(mat.$orange-palette);
 $infoChim-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 
 $light-theme: mat.define-light-theme((
@@ -148,6 +148,26 @@ section {
 
 
 @media only screen and (min-width: 601px) {
+  .divider-1, .divider-2 {
+    height: 25px;
+  }
+
+  .divider-2 {
+      width: 8px;
+      border-left: 4px solid var(--text-color);
+      border-right: 4px solid var(--text-color);
+  }
+
+  .s-reaction {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .divider-1 {
+      width: 4px;
+      background-color: var(--text-color);
+  }
   section {
     margin-bottom: 2rem;
   }
@@ -179,6 +199,8 @@ section {
       font-size: 1.4rem;
       line-height: 1.4;
       font-weight: 300;
+      display: flex;
+      flex-wrap: nowrap;
     }
   }
   .formula {
@@ -319,7 +341,9 @@ section {
       background-color: var(--text-color);
       z-index: 1;
     }
-    
+    .c-alcool-1 {
+      margin-left: 13rem;
+    }
   }
   
 }

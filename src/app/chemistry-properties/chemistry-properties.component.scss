@@ -153,32 +153,13 @@
     }
 }
 
-.divider-1, .divider-2 {
-    height: 25px;
-}
 
-.divider-2 {
-    width: 8px;
-    border-left: 4px solid var(--text-color);
-    border-right: 4px solid var(--text-color);
-}
-
-.s-reaction {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.divider-1 {
-    width: 4px;
-    background-color: var(--text-color);
-}
 
 .alcool-1 {
     margin-left: 13rem;
 }
 .acetat-1 {
-    margin-left: 10rem;
+    margin-left: 10rem!important;
 }
 
 .alcool-2 {
@@ -214,7 +195,7 @@
 }
 
 .bicarbonat {
-    margin-left: 5.5rem;
+    margin-left: 5.5rem!important;
 }
 
 .acetat-4 {
@@ -223,4 +204,8 @@
 
 .anhidra {
     margin-left: 38rem;
+}
+
+.l1 {
+    margin-top: 1rem;
 }

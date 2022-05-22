@@ -4,85 +4,17 @@
     <ul>
         <li>
             <p class="list-header"><b class="green">ALCANI:</b> cu <span class="red">oxigen molecular</span> la temperaturi înalte</p>
-            <div class="formula">
-                <span class="green">R-CH<sub>3</sub>+</span>
-                <div class="fraction">
-                    <span>3</span>
-                    <span class="fraction__divider"></span>
-                    <span>2</span>
-                </div>
-                <span class="red">O</span><sub>2</sub>→
-                <span class="blue">R-COOH</span>
-                +H<sub>2</sub>O
-            </div>
-            <b>Exemplu:</b>
-            <div class="formula">
-                <span class="green">CH<sub>3</sub>-CH<sub>3</sub>+</span>
-                <div class="fraction">
-                    <span>3</span>
-                    <span class="fraction__divider"></span>
-                    <span>2</span>
-                </div>
-                <span class="red">O</span><sub>2</sub>→
-                <span class="blue">CH<sub>3</sub>-COOH</span>
-                +H<sub>2</sub>O
-            </div>
-            <p class="text">
-                <span class="green">Etan</span>
-                <span class="blue acid-1">Acid Etanoic</span>
-            </p>
+            <div [innerHTML]="R[0].reacts[R[0].ex]"></div>
+            <button color="primary" mat-stroked-button (click)="R[0].ex = R[0].ex? 0 : 1">Arată {{ R[0].ex ? 'formula' : 'exemplu' }}</button>
         </li>
     </ul>
     <ul>
         <li>
             <p class="list-header"><b class="purple">ALCHENE:</b> cu <span class="red">oxigen atomic</span> provenit din KMnO<sub>4</sub> și H<sub>2</sub>SO<sub>4</sub></p>
-            <div class="formula">
-                <span class="purple">R-CH=CH<sub>2</sub></span>+5[<span class="red">O</span>]
-                <div class="equal">
-                    <span>KMnO<sub>4</sub></span>
-                    <span class="equal__arrow"></span>
-                    <span>H<sub>2</sub>SO<sub>4</sub></span>
-                </div>
-                <span class="blue">R-COOH</span>+<span class="purple">CO<sub>2</sub></span>+H<sub>2</sub>O
-            </div>
-            <b>Exemplu:</b>
-            <div class="formula">
-                <span class="purple">CH<sub>3</sub>-CH=CH<sub>2</sub></span>+5[<span class="red">O</span>]
-                <div class="equal">
-                    <span>KMnO<sub>4</sub></span>
-                    <span class="equal__arrow"></span>
-                    <span>H<sub>2</sub>SO<sub>4</sub></span>
-                </div>
-                <span class="blue">CH<sub>3</sub>-COOH</span>+<span class="purple">CO<sub>2</sub></span>+H<sub>2</sub>O
-            </div>
-            <p class="text">
-                <span class="purple">Propenă</span>
-                <span class="blue acid-2">Acid acetic</span>
-            </p>
-            <div class="formula space-top">
-                <span class="purple">R-CH=</span><span class="blue">CH-R`</span>+4[<span class="red">O</span>]
-                <div class="equal">
-                    <span>KMnO<sub>4</sub></span>
-                    <span class="equal__arrow"></span>
-                    <span>H<sub>2</sub>SO<sub>4</sub></span>
-                </div>
-                <span class="purple">R-COOH</span>+<span class="blue">R`-COOH</span>
-            </div>
-            <b>Exemplu:</b>
-            <div class="formula">
-                <span class="purple">CH<sub>3</sub>-CH=</span><span class="blue">CH-CH<sub>2</sub>-CH<sub>3</sub></span>+4[<span class="red">O</span>]
-                <div class="equal">
-                    <span>KMnO<sub>4</sub></span>
-                    <span class="equal__arrow"></span>
-                    <span>H<sub>2</sub>SO<sub>4</sub></span>
-                </div>
-                <span class="purple">CH<sub>3</sub>-COOH</span>+<span class="blue">CH<sub>2</sub>-CH<sub>3</sub>-COOH</span>
-            </div>
-            <p class="text">
-                <span class="purple acid-5">2-pentenă</span>
-                <span class="purple acid-3">Acid Etanoic</span>
-                <span class="blue acid-4">Acid Propanoic</span>
-            </p>
+            <div [innerHTML]="R[1].reacts[R[1].ex]"></div>
+            <button color="primary" mat-stroked-button (click)="R[1].ex = R[1].ex? 0 : 1">Arată {{ R[1].ex ? 'formula' : 'exemplu' }}</button>
+            <div [innerHTML]="R[2].reacts[R[2].ex]"></div>
+            <button color="primary" mat-stroked-button (click)="R[2].ex = R[2].ex? 0 : 1">Arată {{ R[2].ex ? 'formula' : 'exemplu' }}</button>
         </li>
     </ul>
 </section>
@@ -109,109 +41,25 @@
     <ul>
         <li>
             <p class="list-header"><b class="green">ALCOOLI:</b> cu <span class="red">oxigen atomic</span> provenit din KMnO<sub>4</sub> și H<sub>2</sub>SO<sub>4</sub></p>
-            <div class="formula">
-                <span class="green">R-CH<sub>2</sub>-OH</span>+2[<span class="red">O</span>]
-                <div class="equal">
-                    <span>KMnO<sub>4</sub></span>
-                    <span class="equal__arrow"></span>
-                    <span>H<sub>2</sub>SO<sub>4</sub></span>
-                </div>
-                <span class="green">R-COOH</span>+H<sub>2</sub>O
-            </div>
-            <b>Exemple:</b>
-            <div class="formula">
-                <span class="green">CH<sub>3</sub>-OH</span>+2[<span class="red">O</span>]
-                <div class="equal">
-                    <span>KMnO<sub>4</sub></span>
-                    <span class="equal__arrow"></span>
-                    <span>H<sub>2</sub>SO<sub>4</sub></span>
-                </div>
-                <span class="green">H-COOH</span>+H<sub>2</sub>O
-            </div>
-            <p class="text green">
-                <span>Metanol</span>
-                <span class="acid-6">Acid Metanoic</span>
-            </p>
-            <div class="formula">
-                <span class="green">CH<sub>3</sub>-CH<sub>2</sub>-OH</span>+2[<span class="red">O</span>]
-                <div class="equal">
-                    <span>KMnO<sub>4</sub></span>
-                    <span class="equal__arrow"></span>
-                    <span>H<sub>2</sub>SO<sub>4</sub></span>
-                </div>
-                <span class="green">CH<sub>3</sub>-COOH</span>+H<sub>2</sub>O
-            </div>
-            <p class="text green">
-                <span>Etanol</span>
-                <span class="acid-7">Acid Etanoic</span>
-            </p>
-            <div class="formula space-top">
-                <span class="green">R-</span><span class="green tree-3" el="R`">CH</span><span class="green">-OH</span>
-                +4[<span class="red">O</span>]
-                <div class="equal">
-                    <span>KMnO<sub>4</sub></span>
-                    <span class="equal__arrow"></span>
-                    <span>H<sub>2</sub>SO<sub>4</sub></span>
-                </div>
-                <span class="green">R-COOH</span>+
-                <span class="green">R`-COOH</span>+H<sub>2</sub>O
-            </div>
-            <div style="margin-top: 4rem;"></div>
-            <b>Exemplu:</b>
-            <div class="formula">
-                <span class="green">CH<sub>3</sub>-CH<sub>2</sub>-</span><span class="green tree-3" el="OH">CH</span><span class="green">-CH<sub>3</sub></span>
-                +4[<span class="red">O</span>]
-                <div class="equal">
-                    <span>KMnO<sub>4</sub></span>
-                    <span class="equal__arrow"></span>
-                    <span>H<sub>2</sub>SO<sub>4</sub></span>
-                </div>
-                <span class="green">CH<sub>3</sub>-CH<sub>2</sub>-COOH</span>+
-                <span class="green">H-COOH</span>+H<sub>2</sub>O
-            </div>
-            <p class="text green">
-                <span class="butanol">2-Butanol</span>
-                <span class="acid-8">Acid Propanoic</span>
-                <span class="acid-9">Acid Metanoic</span>
-            </p>
+            <div [innerHTML]="R[3].reacts[R[3].ex]"></div>
+            <button color="primary" mat-stroked-button (click)="R[3].ex = R[3].ex? 0 : 1">Arată {{ R[3].ex ? 'formula' : 'exemple' }}</button>
+            <div [innerHTML]="R[4].reacts[R[4].ex]"></div>
+            <button style="margin-top: 1rem" color="primary" mat-stroked-button (click)="R[4].ex = R[4].ex? 0 : 1">Arată {{ R[4].ex ? 'formula' : 'exemplu' }}</button>
         </li>
     </ul>
 </section>
-<section style="margin-top: 6rem;" id="hydro">
+<section style="margin-top: 4rem;" id="hydro">
     <h3 class="title-3" ><b>B. </b> Metode Hidrolitice</h3>
     <ul>
         <li>
             <p class="list-header">Hidroliza derivaţilor trihalogenaţi geminal</p>
-            <div class="formula">
-                <span class="blue">R</span>-C<span class="teal">X<sub>3</sub></span>+2
-                <span class="red">H-OH</span>→<span class="blue">R-COOH</span>+3H<span class="teal">X</span>
-            </div>
-            <b>Exemplu:</b>
-            <div class="formula">
-                <span class="blue">CH<sub>3</sub></span>-C<span class="teal">Cl<sub>3</sub></span>+2
-                <span class="red">H-OH</span>→<span class="blue">CH<sub>3</sub>-COOH</span>+3H<span class="teal">Cl</span>
-            </div>
-            <p class="text blue">
-                <span>1,1,1 tricloro-etan</span>
-                <span class="acid-10">Acid Etanoic</span>
-            </p>
+            <div [innerHTML]="R[5].reacts[R[5].ex]"></div>
+            <button color="primary" mat-stroked-button (click)="R[5].ex = R[5].ex? 0 : 1">Arată {{ R[5].ex ? 'formula' : 'exemplu' }}</button>
         </li>
-        <li>
+        <li style="margin-top: 1rem;">
             <p class="list-header">Hidroliza <span class="lime">esterilor</span>, în mediu acid(H<sub>2</sub>SO<sub>4</sub>) sau bazic(NaOH)</p>
-            <div class="formula">
-                <span class="lime">R-COO</span><span class="blue">R`</span>+<span class="red">H<sub>2</sub>O</span>
-                ⇄<span class="lime">R-COOH</span>+<span class="blue">R`-OH</span>
-            </div>
-            <b>Exemplu:</b>
-            <div class="formula">
-                <span class="lime">CH<sub>3</sub>-COO</span><span class="blue">CH<sub>3</sub></span>+<span class="red">H<sub>2</sub>O</span>
-                ⇄<span class="lime">CH<sub>3</sub>-COOH</span>+<span class="blue">CH<sub>3</sub>-OH</span>
-            </div>
-            <p class="text">
-                <span class="lime">Acetat de Metil</span>
-                <span class="lime acid-11">Acid Metanoic</span>
-                <span class="blue metanol">Metanol</span>
-            </p>
+            <div [innerHTML]="R[6].reacts[R[6].ex]"></div>
+            <button color="primary" mat-stroked-button (click)="R[6].ex = R[6].ex? 0 : 1">Arată {{ R[6].ex ? 'formula' : 'exemplu' }}</button>
         </li>
     </ul>
 </section>
