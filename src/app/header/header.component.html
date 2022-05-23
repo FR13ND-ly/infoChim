@@ -3,7 +3,7 @@
     <span class="logo__text">InfoChim</span>
 </div>
 <div class="articles">
-    <div class="articles" *ngIf="{ index : (index$ | async) } as vm">
+    <div class="articles" class="hide-on-mob" *ngIf="{ index : (index$ | async) } as vm">
         <span class="article" 
             *ngFor="let article of articles; let i = index" 
             [routerLink]="article.url"
@@ -11,7 +11,7 @@
             {{ article.name }}</span>
     </div>
     <button mat-icon-button (click)="onChangeTheme()"><mat-icon>brightness_4</mat-icon></button>
-    <!-- <button mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button> -->
+    <button class="hide-on-big" mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
     <div class="user" *ngIf="user$ | async as user; else userLogin">
         <mat-icon class="user__logout" (click)="onLogout()">logout</mat-icon>
         <img class="user__image" [src]="user.photoURL">

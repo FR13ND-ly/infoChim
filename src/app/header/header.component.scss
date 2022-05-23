@@ -1,6 +1,9 @@
 :host {
     display: flex;
     justify-content: space-between;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: .5rem;
 }
 
 .articles {
@@ -32,10 +35,13 @@
     cursor: pointer;
     &__text {
         font-weight: bold;
+        font-size: 1.2rem;
     }
     &__image {
         object-fit: cover;
         overflow: hidden;
+        width: 25px;
+        height: 25px;
     }
 }
 
@@ -43,12 +49,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     background-color: #ccc;
     border-radius: 50%;
     transform: translateY(2px);
-    margin: 0 1rem 0 .2rem;
+    margin: 0 .5rem 0 .6rem;
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -82,7 +88,7 @@
         padding: 1rem;
     }
     .articles {
-        gap: .5rem;
+        gap: 1rem;
     }
     .logo {
         &__text {
@@ -92,5 +98,15 @@
             width: 30px;
             height: 30px;
         }
+    }
+
+    .article {
+        margin: 0 .25rem;
+    }
+
+    .user {
+        width: 45px;
+        height: 45px;
+        margin: 0 1rem 0 .2rem;
     }
 }

@@ -148,11 +148,221 @@ section {
 }
 
 
+.hide-on-mob {
+  display: none!important;
+}
 
+.hide-on-big {
+  display: block;
+}
+
+.divider-1, .divider-2 {
+  height: 15px;
+}
+
+.divider-2 {
+    width: 4px;
+    border-left: 3px solid var(--text-color);
+    border-right: 3px solid var(--text-color);
+}
+
+.s-reaction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divider-1 {
+    width: 3px;
+    background-color: var(--text-color);
+}
+section {
+  margin-bottom: .8rem;
+}
+sub {
+  font-size: .45em;
+  line-height: 0;
+  transform: translateY(.8rem);
+}
+body {
+  span {
+    white-space: nowrap;
+  }
+  .title-1 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: .5;
+  }
+  .title-2 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .title-3 {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    line-height: normal;
+  }
+  .text {
+    font-size: .8rem;
+    line-height: 1.4;
+    font-weight: 300;
+    margin-bottom: 0;
+  }
+}
+.formula {
+  display: flex;
+  font-size: 1.4rem;
+  font-family: Lato, sans-serif;
+  line-height: normal;
+  white-space: nowrap;
+  align-items: center;
+  user-select: none;
+  &__connector {
+    height: 15px;
+    width: 3px;
+    background-color: var(--text-color);
+    transform: translateX(.95rem);
+    margin-top: -.2rem;
+    margin-bottom: -.4rem;
+  }
+  &__double-connector {
+    height: 15px;
+    width: 4px;
+    border-left: 3px solid var(--text-color);
+    border-right: 3px solid var(--text-color);
+    transform: translateX(.6rem);
+    margin-top: -.2rem;
+    margin-bottom: -.4rem;
+  }
+  &--vertical {
+    flex-direction: column;
+  }
+}
+.equal {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  font-size: .65rem;
+  margin: 0 .3rem;
+  transform: translateY(2.2px);
+  &__arrow {
+    margin-bottom: -.6rem;
+    &::after {
+      content: "→";
+      color: var(--text-color);
+      line-height: 0;
+      font-size: 3rem;
+    }
+  }
+}
+.hex {
+  height: 48px;
+  &--lower {
+    margin-bottom: -1rem;
+  }
+}
+.tree-1, .tree-3 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    bottom: -1rem;
+    height: 15px;
+    width: 4px;
+    border-left: 3px solid var(--text-color);
+    border-right: 3px solid var(--text-color);
+  }
+  &::after {
+    content: attr(el);
+    position: absolute;
+    bottom: -2.5rem;
+  }
+}
+.tree-3::before {
+  border: none;
+  width: 3px;
+  background-color: var(--text-color);
+}
+.tree-1.red-el::after {
+  color: var(--red-color);
+}
+
+.list-header {
+  font-size: 1rem;
+  line-height: normal;
+}
+.elements {
+  display: flex;
+  gap: 1rem .8rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.element {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  background-color: var(--bg-color-2);
+  box-sizing: border-box;
+  padding: .6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  @include mat.elevation(2);
+  &--show .type__text {
+    opacity: 1;
+  }
+}
+.fraction {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  font-size: 1.2rem;
+  margin: 0 .3rem;
+  transform: translateY(2.2px);
+  &__divider {
+      width: 100%;
+      height: 2px;
+      background-color: var(--text-color);
+  }
+}
+.type {
+  position: relative;
+  width: max-content;
+  margin-top: .2rem;
+  &__text {
+    opacity: 0;
+    font-size: .8rem;
+    transition: .2s ease-in-out;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--text-color);
+    z-index: 1;
+  }
+}
 
 @media only screen and (min-width: 601px) {
+  .hide-on-mob {
+    display: flex!important;
+  }
+  .hide-on-big {
+    display: none;
+  }
   .divider-1, .divider-2 {
     height: 25px;
+  }
+  section {
+    margin-bottom: 2rem;
   }
 
   .divider-2 {
@@ -342,9 +552,6 @@ section {
       height: 1px;
       background-color: var(--text-color);
       z-index: 1;
-    }
-    .c-alcool-1 {
-      margin-left: 13rem;
     }
   }
 }

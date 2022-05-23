@@ -28,7 +28,7 @@ export class ChemistryPropertiesComponent implements OnInit {
         </div>
         <p class="text names">
             <span class="blue">Acid Acetic</span>
-            <span class="teal bicarbonat">Bicarbonat de Sodiu(praf de copt)</span>
+            <span class="teal bicarbonat">Bicarbonat de Sodiu</span>
             <span class="red acetat-4">Acetat de Sodiu</span>
         </p>`)
       ],

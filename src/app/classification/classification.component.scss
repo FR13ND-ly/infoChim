@@ -1,16 +1,36 @@
 .list-1 {
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .list-item-1 {
-    font-size: 1rem;
+    font-size: .9rem;
     line-height: normal;
     margin-left: -.8rem;
 }
 
 
 .list-item-2 {
-    font-size: 1.6rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
     line-height: normal;
+}
+
+@media only screen and (min-width: 601px) {
+    .list-1 {
+        gap: 3rem;
+    }
+    
+    .list-item-1 {
+        font-size: 1rem;
+        line-height: normal;
+        margin-left: -.8rem;
+    }
+    
+    
+    .list-item-2 {
+        font-size: 1.6rem;
+        line-height: normal;
+        margin-bottom: 0;
+    }
 }

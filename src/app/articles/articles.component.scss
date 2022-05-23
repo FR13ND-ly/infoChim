@@ -9,6 +9,8 @@ main {
     display: flex;
     flex-direction: column;    
     width: 100%;
+    box-sizing: border-box;
+    padding: 1rem .8rem 0;
 }
 
 
