@@ -1,9 +1,9 @@
 .hex {
     &--yellow {
-        filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(-6deg) brightness(159%) contrast(80%);
+        filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(-6deg) brightness(159%) contrast(80%)!important;
     }
     &--blue {
-        filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(170deg) brightness(79%) contrast(119%);
+        filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(170deg) brightness(79%) contrast(119%)!important;
     }
 }
 
@@ -117,10 +117,5 @@ ul {
     
     .metanol {
         margin-left: 7.5rem;
-    }
-    
-    .text.names {
-        display: flex;
-        flex-wrap: nowrap;
     }
 }

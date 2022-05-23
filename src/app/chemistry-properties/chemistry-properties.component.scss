@@ -224,103 +224,55 @@
     .connector {
         width: 40px;
         height: 3px;
-        background-color: var(--red-color);
-        position: relative;
-        display: flex;
-        align-items: center;
         &::before, &::after {
-            content: '';
             width: 8px;
             height: 8px;
-            background-color: var(--text-color);
-            border-radius: 50%;
-            position: absolute;
         }
-        &::after {
-            right: 0;
-        }
-    }
-    
-    .dots {
-        position: relative;
-        margin-right: 1rem;
-        transform: translateY(-3px);
     }
     
     .negative, .negative-2, .positive, .positive-2 {
-        position: relative;
         &::after { 
-            content: '+';
-            position: absolute;
-            color: var(--blue-color);
             font-size: 1.2rem;
-            font-weight: bold;
             right: -.2rem;
             top: -.3rem;
         }
-    }
-    
-    .negative-2::after {
-        right: 0rem;
-    }
-    
-    .negative::after, .negative-2::after {
-        content: '-';
     }
     
     .positive-2::after {
         top: 0rem;
         right: -.4rem;
         font-size: .9rem;
-        content: '2+';
     }
     
     .dot {
         width: 6px;
         height: 6px;
-        background-color: var(--text-color);
-        border-radius: 50%;
-        position: absolute;
         &:nth-child(1) {
             left: .6rem;
-            top: 0;
         }
         &:nth-child(2) {
             right: .6rem;
-            top: 0;
         }
         &:nth-child(3) {
-            right: -20%;
             top: 1.2rem;
         }
         &:nth-child(4) {
-            right: -20%;
             bottom: 1.2rem;
         }
         &:nth-child(5) {
             left: .6rem;
-            bottom: 0%;
         }
         &:nth-child(6) {
             right: .6rem;
-            bottom: 0%;
         }
     }
     
-    .with-arrow {
-        position: relative;
-    }
-    
     .arrow {
-        stroke: var(--text-color);
-        position: absolute;
-        transform: none;
         top: -1.8rem;
         left: -.2rem;
     }
     
     .up-arrow {
-        position: absolute;
         font-size: 1.2rem;
         top: -3rem;
         left: 4.5rem;
@@ -330,50 +282,17 @@
     }
     
     .potions {
-        display: flex;
-        justify-content: left;
         gap: 2rem;
         margin-bottom: 2rem;
     }
     
     .potion {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        cursor: pointer;
         &__image {
-            mask-size: cover;
-            -webkit-mask-image: url('/assets/images/potion.svg');
-            mask-image: url('/assets/images/potion.svg');
-            background-color: var(--purple-color);
             width: 200px; 
             height: 250px; 
-            transition: .5s cubic-bezier(0, 0, .2, 1);
-            cursor: pointer;
-            &:hover {
-                background-color: var(--blue-color);
-            }
         }
         &__name {
-            position: absolute;
-            bottom: 10%;
-            user-select: none;
             font-size: 1.6rem;
-            font-weight: bold;
-            z-index: 1;
-            color: #fff;
-        }
-        &:hover &__image {
-            background-color: var(--red-color);
-        }
-        &:nth-of-type(2) { 
-            .potion__image {
-                background-color: #f57c00;
-                
-            }
-            &:hover .potion__image {
-                background-color: var(--red-color);
-            }
         }
     }
     
@@ -382,7 +301,7 @@
         margin-left: 13rem;
     }
     .acetat-1 {
-        margin-left: 10rem!important;
+        margin-left: 10rem;
     }
     
     .alcool-2 {
